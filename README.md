@@ -98,6 +98,11 @@ This application serves as a **Star Wars API Search Interface** with built-in **
 - **Visual Charts**: Interactive charts for data visualization
 - **Auto-refresh**: Updates every 5 minutes
 
+### Endpoints
+```
+/stats: return the same data displayed on dashboard
+```
+
 ### Key Metrics Tracked
 - API response times and performance
 - Most popular search queries
