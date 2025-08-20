@@ -10,6 +10,11 @@ export const TopQueriesChart = async (): Promise<ReactElement> => {
 		<Card>
 			<Heading className="text-lg mb-4">Top 5 Queries</Heading>
 			<div className="space-y-3">
+				{!topQueries.length && (
+					<div className="text-sm text-neutral-600">
+						No data available
+					</div>
+				) }
 				{topQueries.map((query, index) => (
 					<div key={query.url} className="space-y-2">
 						<div className="flex justify-between items-center text-sm">

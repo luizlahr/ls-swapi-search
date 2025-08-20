@@ -10,6 +10,11 @@ export const TopTenHoursChart = async (): Promise<ReactElement> => {
 		<Card>
 			<Heading className="text-lg mb-4">Top 10 Hours</Heading>
 			<div className="space-y-2">
+				{!topTenHours.length && (
+					<div className="text-sm text-neutral-600">
+						No data available
+					</div>
+				) }
 				{topTenHours.map((hour) => (
 					<div key={hour.hour} className="flex items-center space-x-3">
 						<div className="w-12 text-sm font-medium">

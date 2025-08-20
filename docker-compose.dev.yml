@@ -1,0 +1,22 @@
+services:
+  app-dev:
+    build:
+      context: .
+      target: deps
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=file:./dev.db
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    working_dir: /app
+    command: sh -c "pnpm db:generate && pnpm dev --hostname 0.0.0.0"
+    stdin_open: true
+    tty: true
+
+networks:
+  default:
+    name: frontend-dev-network
