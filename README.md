@@ -1,4 +1,4 @@
-# LawnStarter Technical Interview - Star Wars Analytics Dashboard
+# SWStarter - Star Wars API and Analytics Dashboard
 
 A modern Next.js application that provides search functionality for Star Wars characters and films while tracking and analyzing API request patterns. This project demonstrates full-stack development skills with real-time analytics, performance monitoring, and a responsive user interface.
 
