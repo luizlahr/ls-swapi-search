@@ -1,0 +1,11 @@
+-- CreateTable
+CREATE TABLE "stats" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "url" TEXT NOT NULL,
+    "method" TEXT NOT NULL DEFAULT 'GET',
+    "status" INTEGER,
+    "duration" REAL NOT NULL,
+    "timestamp" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL
+);

@@ -1,23 +1,55 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #ededed;
   --foreground: #171717;
+
+  --ls-gray-200: #dadada;
+  --ls-gray-400: #c4c4c4;
+
+  --ls-slate-500: #848484bf;
+
+  --ls-blue-500: #0094ff;
+
+  /* PROVIDED | NO ACCESSIBLE */
+  /*
+  --ls-green-500: #089954;
+  --ls-green-400: #0ab463;
+  */
+
+  --ls-green-500: var(--color-green-700);
+  --ls-green-400: var(--color-green-600);
+
+  --ls-shadow-sm: 0 1px 0 0 var(--ls-gray-200);
+  --ls-shadow-lg: 0 0.5px 1px 0 var(--ls-slate-500);
+  --ls-shadow-inset: inset 0 0.5px 1.5px 0 var(--ls-slate-500);
+
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-ls-gray-200: var(--ls-gray-200);
+  --color-ls-gray-400: var(--ls-gray-400);
+  --color-ls-slate-500: var(--ls-slate-500);
+  --color-ls-blue-500: var(--ls-blue-500);
+  --color-ls-green-500: var(--ls-green-500);
+  --color-ls-green-400: var(--ls-green-400);
+
+  --font-sans: "Montserrat", sans-serif;
+
+  --shadow-ls: var(--ls-shadow-sm);
+  --shadow-ls-lg: var(--ls-shadow-lg);
+  --shadow-ls-inset: var(--ls-shadow-inset);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
